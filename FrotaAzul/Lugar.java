@@ -8,7 +8,15 @@
 public class Lugar
 {
     private int numLugar;
-    private boolean lugarOcupado;
-    private Autocarro autocarro;
+    private boolean isOcupado;
+    private Autocarro autocarroEstacionado;
+    
+    public Lugar() {}
+    
+    public Lugar(int numLugar) {
+        this.numLugar = numLugar;
+        this.isOcupado = false ;
+        this.autocarroEstacionado = null;
+    }
     
 }
