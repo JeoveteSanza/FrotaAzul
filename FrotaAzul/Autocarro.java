@@ -71,7 +71,7 @@ public class Autocarro
         String resultado = "";
         
         StringBuilder sb = new StringBuilder();
-        sb.append("-------------------------------\n");
+        sb.append("\n-------------------------------\n");
         sb.append("Matricula: " + this.matricula);
         sb.append("\nCor: " +this.cor);
         sb.append("\nNum. Lugares: " + this.numLugares);
