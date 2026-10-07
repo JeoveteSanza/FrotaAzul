@@ -64,10 +64,114 @@ public class TesteAutocarro
     int nl1 = a1.getNumLugares();
     
     if(nl1 == 101) {
-        
+        System.out.println("O passou no teste get");
+    } else {
+        System.out.println("Não passou no teste");
     }
+     
+    a1.setNumLugares(102);
+    int nl2 = a1.getNumLugares();
+    
+    if(nl2 == 102) {
+        System.out.println("A mudança foi um sucesso");
+    } else {
+        System.out.println("Não deu certo");
     }
     
+    boolean ac = a1.getArCondicionado();
+    if(ac == true) {
+        System.out.println("Passou no teste de ac");
+    } else {
+        System.out.println("Não passo no teste de ac");
+    }
     
-  
+    a1.setArCondicionado(false);
+    boolean ac2 = a1.getArCondicionado();
+    
+    if(ac2 == false) {
+        System.out.println("O teste do falso foi um sucesso");
+    } else {
+        System.out.println("O teste do false nao foi um sucesso");
+    }
+    
+    double kilo1 = a1.getKms();
+    
+    if(kilo1 == 101.00) {
+        System.out.println("O teste do kilo foi um sucesso chefe");
+    } else {
+        System.out.println("Temos um problema chefe");
+    }
+    
+    a1.setKms(102.00);
+    double kilo2 = a1.getKms();
+    
+    if(kilo2 == 102.00){
+        System.out.println("Chefe kilometros corretos");
+    } else {
+        System.out.println("Chefe kilometros mal contados");
+    }
+    
+    Lugar l1 = new Lugar(12);
+    
+    String objetoLugar = (l1.toString());
+    System.out.println(objetoLugar);
+    
+    int numLugar1 = l1.getNumLugar();
+    if(numLugar1 == 12) {
+        System.out.println("O lugar está no sitio certo");
+    } else {
+        System.out.println("Dr.José o lugar é diferente");
+    }
+    
+    l1.setNumLugar(13);
+    int numLugar2 = l1.getNumLugar();
+    
+    if(numLugar2 == 13) {
+        System.out.println("Chefe mais uma vez no sitio certo");
+    } else {
+        System.out.println("Dr.José esta num lugar diferente denovo");
+    }
+    
+    boolean ocupado1 = l1.getOcupado();
+    
+    if(ocupado1 == false) {
+        System.out.println("Dr.José o lugar esta desocupado");
+    } else {
+        System.out.println("Dr.José o lugar esta ocupado");
+    }
+    
+    l1.setOcupado(true);
+    boolean ocupado2 = l1.getOcupado();
+    
+    if(ocupado2 == true) {
+        System.out.println("Chefe este lugar esta ocupado");
+    } else {
+        System.out.println("Chefe algo deu errado");
+    }
+    
+    l1.getAutocarro();
+    Autocarro autocarroEstacionado1 = l1.getAutocarro();
+    
+    if(autocarroEstacionado1 == null ) {
+        System.out.println("A tua logica deu certo, por incrivel que pareça");
+    } else {
+        System.out.println("A tua logica nao deu certo");
+    }
+    
+    l1.setAutocarro(a1);
+    Autocarro autocarroEstacionado2 = l1.getAutocarro();
+    
+    
+    String objetoLugar2 = l1.toString();
+    System.out.println(objetoLugar2);
+    
+    /*if(autocarroEstacionado2.equals(a1)) {
+        System.out.println("Chefe deu todo certo");
+    } else {
+        System.out.println("Chefe deu errado");
+    }*/
+    
+
+    
+}
 }

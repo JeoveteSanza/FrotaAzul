@@ -1,3 +1,19 @@
 #BlueJ class context
+#Mon Oct 05 18:40:42 WEST 2026
 comment0.target=Parque
-numComments=1
+comment1.target=Parque()
+comment10.params=novoLugar
+comment10.target=void adicionarLugar(Lugar)
+comment2.params=nome morada numDeLugares
+comment2.target=Parque(java.lang.String, java.lang.String, int)
+comment3.target=java.lang.String getNome()
+comment4.target=java.lang.String getMorada()
+comment5.params=nome
+comment5.target=void setNome(java.lang.String)
+comment6.params=morada
+comment6.target=void setMorada(java.lang.String)
+comment7.target=int getNumDeLugares()
+comment8.params=numDeLugares
+comment8.target=void setNumDelugares(int)
+comment9.target=java.util.ArrayList getLugares()
+numComments=11

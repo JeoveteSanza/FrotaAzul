@@ -19,4 +19,43 @@ public class Lugar
         this.autocarroEstacionado = null;
     }
     
+    public int getNumLugar() {
+        return this.numLugar;
+    }
+    
+    public void setNumLugar(int NumLugar) {
+        this.numLugar = NumLugar;
+    }
+    
+    public boolean getOcupado() {
+        return this.isOcupado;
+    }
+    
+    public void setOcupado(boolean isOcupado) {
+        this.isOcupado = isOcupado;
+    }
+    
+    public Autocarro getAutocarro() {
+        return autocarroEstacionado;
+    }
+    
+    public void setAutocarro(Autocarro autocarroEstacionado) {
+        this.autocarroEstacionado = autocarroEstacionado;
+        this.isOcupado = true;
+    }
+    
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        String resultado = "";
+        sb.append("\n--------------------------------------------------------\n");
+        sb.append("N.Lugar: " + this.numLugar);
+        sb.append("\nOcupado: " +this.isOcupado);
+        sb.append("\nAutocarro Estacionado: " + this.autocarroEstacionado);
+        sb.append("\n----------------------------------------------------------");
+        
+        resultado = sb.toString();
+        
+        return resultado;
+    }
+    
 }
