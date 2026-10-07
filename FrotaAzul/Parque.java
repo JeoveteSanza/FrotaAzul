@@ -13,13 +13,20 @@ public class Parque
     public Parque(String nome, String morada, int numDeLugares){
         this.nome = nome;
         this.morada = morada;
-        this.lugares = new ArrayList<Lugar>();
-        this.numDeLugares = numDeLugares;
+        this.lugares = new ArrayList<>();
+        
+        for(int i = 0; i < numDeLugares; i++) {
+            int numLugar =  i;
+            
+            Lugar lTemp = new Lugar(numLugar);
+            
+            this.lugares.add(lTemp);
+        }
     }
     
     public String getNome(){
         return this.nome;
-    }
+    } 
     
     public String getMorada(){
         return morada;
@@ -51,5 +58,17 @@ public class Parque
         } else {
             System.out.println("O parque está cheio");
         }
+    }
+    
+    public boolean estacionar(Autocarro a){
+        for( int i = 0; i < this.lugares.size(); i++)
+        {
+            if(! this.lugares.get(i).getIsOcupado()){
+                this.lugares.get(i).estacionarAutocarro(a);
+                
+                return true;
+            }
+        }
+        return false;
     }
 }

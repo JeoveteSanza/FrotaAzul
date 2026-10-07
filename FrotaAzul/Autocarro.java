@@ -7,6 +7,7 @@
  */
 public class Autocarro
 {
+    static final int min_Lugares = 10;
     private String matricula;               // "xx-xx-xx ou xxxxxx"
     private String cor;                    //  "#xxxxxx"
     private int numLugares;               // 
@@ -22,9 +23,15 @@ public class Autocarro
     {
         this.matricula = matricula;
         this.cor = cor;
-        this.numLugares = numLugares;
+        // Não seja possivel inserir numLugares negativos
+        if(numLugares >= 1){
+            this.numLugares = numLugares;
+        }
         this.arCondicionado = arCondicionado;
+        if(kms >= 1)
+        {
         this.kms = kms;
+        }
     }
     
     public String getMatricula(){
@@ -83,4 +90,27 @@ public class Autocarro
         
         return resultado;
     }
+    
+    static boolean validaKms(double kmsAvalidar){
+        if(kmsAvalidar >= 1){
+            return true;
+        }
+        
+        return false;
+        
+    }
+    
+    static boolean validaNumLugares(int lugaresAvalidar){
+        if(lugaresAvalidar >=  min_Lugares){
+            return true;
+        }
+        
+        return false;
+        
+    }
+    
+    
+    
+    
+    
 }
