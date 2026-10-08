@@ -13,13 +13,20 @@ public class Parque
     public Parque(String nome, String morada, int numDeLugares){
         this.nome = nome;
         this.morada = morada;
-        this.lugares = new ArrayList<Lugar>();
-        this.numDeLugares = numDeLugares;
+        this.lugares = new ArrayList<>();
+        
+        for(int i = 0; i < numDeLugares; i++) {
+            int numLugar =  i;
+            
+            Lugar lTemp = new Lugar(numLugar);
+            
+            this.lugares.add(lTemp);
+        }
     }
     
     public String getNome(){
         return this.nome;
-    }
+    } 
     
     public String getMorada(){
         return morada;
@@ -53,15 +60,27 @@ public class Parque
         }
     }
     
+<<<<<<< HEAD
     public boolean lugaresAvailable() {
         for(int i = 0; i < lugares.size() ; i++) {
             if(lugares.get(i).getOcupado() == true) {
+=======
+    public boolean estacionar(Autocarro a){
+        for( int i = 0; i < this.lugares.size(); i++)
+        {
+            if(! this.lugares.get(i).getIsOcupado()){
+                this.lugares.get(i).estacionarAutocarro(a);
+                
+>>>>>>> 43207a0300746c3d36ff0f9b84b64d104c904f77
                 return true;
             }
         }
         return false;
     }
+<<<<<<< HEAD
     
     public void 
     
+=======
+>>>>>>> 43207a0300746c3d36ff0f9b84b64d104c904f77
 }

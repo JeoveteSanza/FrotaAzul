@@ -111,6 +111,20 @@ public class TesteAutocarro
         System.out.println("Chefe kilometros mal contados");
     }
     
+    //validar numLugares e numkms
+    double kmsAvalidar = -2.5;
+    int numLugaresAvalidar = 100;
+    String matricula = "uu-uu-uu";
+    String cora10 = "preto";
+    boolean acA10 = true;
+    
+    boolean kmsValidados = Autocarro.validaKms(kmsAvalidar);
+    boolean numLugaresValidados = Autocarro.validaNumLugares(numLugaresAvalidar);
+    
+    if(kmsValidados && numLugaresValidados) {
+        Autocarro a10 = new Autocarro(matricula, cora10, numLugaresAvalidar, acA10, kmsAvalidar);
+    }
+    
     Lugar l1 = new Lugar(12);
     
     String objetoLugar = (l1.toString());

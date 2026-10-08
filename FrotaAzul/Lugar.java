@@ -27,7 +27,7 @@ public class Lugar
         this.numLugar = NumLugar;
     }
     
-    public boolean getOcupado() {
+    public boolean getIsOcupado() {
         return this.isOcupado;
     }
     
@@ -39,9 +39,26 @@ public class Lugar
         return autocarroEstacionado;
     }
     
-    public void setAutocarro(Autocarro autocarroEstacionado) {
-        this.autocarroEstacionado = autocarroEstacionado;
-        this.isOcupado = true;
+    public boolean estacionarAutocarro(Autocarro a) {
+        if(this.isOcupado){
+            this.isOcupado = true;
+            this.autocarroEstacionado = a;
+            
+            return true;
+        }
+        
+        return false;
+    }
+    
+    public boolean desocuparLugar() {
+        if(this.isOcupado) {
+            this.isOcupado = false;
+            this.autocarroEstacionado = null;
+            
+            return true;
+        }
+        
+        return false;
     }
     
     public String toString(){
