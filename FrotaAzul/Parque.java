@@ -52,4 +52,16 @@ public class Parque
             System.out.println("O parque está cheio");
         }
     }
+    
+    public boolean lugaresAvailable() {
+        for(int i = 0; i < lugares.size() ; i++) {
+            if(lugares.get(i).getOcupado() == true) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public void 
+    
 }

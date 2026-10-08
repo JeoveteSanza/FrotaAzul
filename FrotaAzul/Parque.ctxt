@@ -1,9 +1,10 @@
 #BlueJ class context
-#Mon Oct 05 18:40:42 WEST 2026
+#Thu Oct 08 18:23:09 WEST 2026
 comment0.target=Parque
 comment1.target=Parque()
 comment10.params=novoLugar
 comment10.target=void adicionarLugar(Lugar)
+comment11.target=boolean lugaresAvailable()
 comment2.params=nome morada numDeLugares
 comment2.target=Parque(java.lang.String, java.lang.String, int)
 comment3.target=java.lang.String getNome()
@@ -16,4 +17,4 @@ comment7.target=int getNumDeLugares()
 comment8.params=numDeLugares
 comment8.target=void setNumDelugares(int)
 comment9.target=java.util.ArrayList getLugares()
-numComments=11
+numComments=12
