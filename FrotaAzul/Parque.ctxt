@@ -1,11 +1,16 @@
 #BlueJ class context
-#Thu Oct 08 18:49:11 WEST 2026
+#Sun Oct 11 17:16:26 WEST 2026
 comment0.target=Parque
 comment1.target=Parque()
 comment10.params=novoLugar
 comment10.target=void adicionarLugar(Lugar)
 comment11.params=a
 comment11.target=boolean estacionar(Autocarro)
+comment12.target=boolean lugaresAvailable()
+comment13.params=removerA
+comment13.target=boolean removerAutocarro(Autocarro)
+comment14.params=procurarA
+comment14.target=void lugarDoAutocarro(Autocarro)
 comment2.params=nome morada numDeLugares
 comment2.target=Parque(java.lang.String, java.lang.String, int)
 comment3.target=java.lang.String getNome()
@@ -18,4 +23,4 @@ comment7.target=int getNumDeLugares()
 comment8.params=numDeLugares
 comment8.target=void setNumDelugares(int)
 comment9.target=java.util.ArrayList getLugares()
-numComments=12
+numComments=15
