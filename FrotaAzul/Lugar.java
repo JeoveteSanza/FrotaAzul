@@ -40,7 +40,7 @@ public class Lugar
     }
     
     public boolean estacionarAutocarro(Autocarro a) {
-        if(this.isOcupado){
+        if(!this.isOcupado){
             this.isOcupado = true;
             this.autocarroEstacionado = a;
             

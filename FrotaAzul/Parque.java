@@ -13,8 +13,8 @@ public class Parque
     public Parque(String nome, String morada, int numDeLugares){
         this.nome = nome;
         this.morada = morada;
-        this.lugares = new ArrayList<>();
-        
+        this.lugares = new ArrayList<>(numDeLugares);
+        this.numDeLugares = numDeLugares;
         for(int i = 0; i < numDeLugares; i++) {
             int numLugar =  i;
             
@@ -60,15 +60,47 @@ public class Parque
         }
     }
     
+
     public boolean estacionar(Autocarro a){
-        for( int i = 0; i < this.lugares.size(); i++)
+        for( Lugar lugar : lugares)
         {
-            if(! this.lugares.get(i).getIsOcupado()){
-                this.lugares.get(i).estacionarAutocarro(a);
-                
+            if(!lugar.getIsOcupado()){
+                lugar.estacionarAutocarro(a);
+
                 return true;
             }
         }
         return false;
     }
-}
+    
+    public int lugaresAvailable(){
+        int lugaresAvailable = 0;
+        for(Lugar lugar : this.lugares){
+            if(!lugar.getIsOcupado()){
+                lugaresAvailable += 1;
+            }
+        }
+
+        return lugaresAvailable;
+    }
+
+    public boolean removerAutocarro (Autocarro removerA){
+        for(Lugar lugar : this.lugares){
+            if(lugar.getIsOcupado() && lugar.getAutocarro().getMatricula() == removerA.getMatricula()){
+                lugar.desocuparLugar();
+            }
+            return true;
+        }
+        return false;
+    }
+    
+    public void lugarDoAutocarro(Autocarro procurarA) {
+        for(Lugar lugar : lugares){
+            if(lugar.getAutocarro() == procurarA){
+             int numAutocarro =  lugar.getNumLugar();
+             
+             System.out.println("Lugar: " + numAutocarro);
+            }
+            }
+        }
+    }
